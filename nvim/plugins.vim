@@ -19,6 +19,10 @@ Plug 'nvim-lua/diagnostic-nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
+" Buffline
+Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
+Plug 'akinsho/nvim-bufferline.lua'
+
 " Floating Terminal
 Plug 'voldikss/vim-floaterm'
 
@@ -39,3 +43,8 @@ let g:mkdp_browser = 'firefox-bin'
 let g:floaterm_width = 0.8
 let g:floaterm_height = 0.8
 let g:floaterm_autoclose = 1
+
+" Necessary options for Buffline
+set termguicolors
+" In your init.vim AFTER loading plugins
+lua require'bufferline'.setup()

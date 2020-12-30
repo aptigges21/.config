@@ -37,7 +37,6 @@ set background=dark
 colorscheme iceberg 
 let g:airline_theme='iceberg'
 syntax on
-
 set number
 set laststatus=2
 

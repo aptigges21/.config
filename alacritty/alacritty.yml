@@ -17,7 +17,7 @@ colors:
 
 font:
     normal:
-        family: 'JetBrainsMono NF'
+        family: JetBrainsMono Nerd Font
         style: Regular
 
     size: 12
