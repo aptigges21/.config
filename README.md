@@ -1,1 +1,1 @@
-## Configuration files for alacritty and neovim
+## Configuration files for neovim (and possibly others later)
