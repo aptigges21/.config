@@ -1,6 +1,9 @@
 let mapleader=" "
 noremap <Space> <Nop>
 
+" General Commands
+noremap <silent><C-s>     :w<CR>
+
 " Add Nerd Tree support
 noremap <silent><leader>e :NERDTreeToggle<CR>
 noremap <silent><leader>h :noh<CR>
@@ -17,8 +20,8 @@ noremap <silent><leader>tg :FloatermNew lazygit<CR>
 noremap <silent><leader>ah :noh<CR>
 
 " Buffer Commands
-noremap <silent><leader>bj :BufferLineCyclePrev<CR>
-noremap <silent><leader>bk :BufferLineCycleNext<CR>
+noremap <silent><Tab>      :BufferLineCyclePrev<CR>
+noremap <silent><S-Tab>    :BufferLineCycleNext<CR>
 noremap <silent><leader>bh :BufferLineMoveNext<CR>
 noremap <silent><leader>bl :BufferLineMovePrev<CR>
 noremap <silent><leader>bd :Bdelete<CR>

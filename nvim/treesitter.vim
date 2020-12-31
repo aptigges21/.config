@@ -2,7 +2,7 @@ lua <<EOF
 require'nvim-treesitter.configs'.setup {
     ensure_installed = { "rust", "c" },
     highlight = {
-        enable = true, -- false will disable the whole extension
+        enable = {c}, -- false will disable the whole extension
         disable = {},  -- list of language that will be disabled
     },
     incremental_selection = {

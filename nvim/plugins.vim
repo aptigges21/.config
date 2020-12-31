@@ -1,3 +1,5 @@
+set nocompatible
+
 call plug#begin('~/.vim/plugged')
 
 " Themes
@@ -18,6 +20,9 @@ Plug 'airblade/vim-gitgutter'
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
+
+" Polyglot
+Plug 'sheerun/vim-polyglot'
 
 " Cosmetics
 Plug 'ryanoasis/vim-devicons'
