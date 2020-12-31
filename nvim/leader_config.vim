@@ -21,3 +21,4 @@ noremap <silent><leader>bj :BufferLineCyclePrev<CR>
 noremap <silent><leader>bk :BufferLineCycleNext<CR>
 noremap <silent><leader>bh :BufferLineMoveNext<CR>
 noremap <silent><leader>bl :BufferLineMovePrev<CR>
+noremap <silent><leader>bd :Bdelete<CR>

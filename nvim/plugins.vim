@@ -7,21 +7,26 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'ap/vim-css-color'
 Plug 'joshdick/onedark.vim'
 
+" Misc
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
-Plug 'bling/vim-airline'
 Plug 'tmhedberg/SimpylFold'
-Plug 'vim-scripts/indentpython.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'nvim-lua/diagnostic-nvim'
 Plug 'airblade/vim-gitgutter'
-Plug 'octol/vim-cpp-enhanced-highlight'
 
-" Buffline
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+
+" Cosmetics
 Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-airline'
+
+" Bufferline and controls
+Plug 'moll/vim-bbye'
 Plug 'akinsho/nvim-bufferline.lua'
 
 " Floating Terminal

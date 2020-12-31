@@ -3,7 +3,8 @@
 let g:nvim_config_root = stdpath('config')
 let g:config_file_list = ['filetype_options.vim',
 			\ 'plugins.vim',
-      \ 'leader_config.vim'
+      \ 'leader_config.vim',
+      \ 'treesitter.vim'
 			\ ]
 
 for f in g:config_file_list
