@@ -2,8 +2,7 @@ lua <<EOF
 require'nvim-treesitter.configs'.setup {
     ensure_installed = { "rust", "c" },
     highlight = {
-        enable = {c}, -- false will disable the whole extension
-        disable = {},  -- list of language that will be disabled
+        enable = true, -- false will disable the whole extension
     },
     incremental_selection = {
         enable = true,
@@ -18,7 +17,18 @@ require'nvim-treesitter.configs'.setup {
         },
     },
 }
+
+require "nvim-treesitter.configs".setup {
+  playground = {
+    enable = true,
+    disable = {},
+    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+    persist_queries = false -- Whether the query persists across vim sessions
+  }
+}
 EOF
+
+
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()

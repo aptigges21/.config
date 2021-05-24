@@ -1,5 +1,4 @@
 " Splits and split navigations
-set splitbelow
 set splitright
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -7,6 +6,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 filetype plugin on
+
+" Commenting
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
 
 " Declare previewer for latex live preview
 let g:livepreview_previewer = 'zathura'
@@ -58,3 +61,6 @@ vnoremap < <gv
 vnoremap > >gv
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Snippets as a part of auto completion
+let g:completion_enable_snippet = 'UltiSnips'
