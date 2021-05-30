@@ -19,9 +19,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
-" Polyglot
-Plug 'sheerun/vim-polyglot'
-
 " Cosmetics
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'

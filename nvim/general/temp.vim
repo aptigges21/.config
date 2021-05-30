@@ -64,3 +64,5 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Snippets as a part of auto completion
 let g:completion_enable_snippet = 'UltiSnips'
+
+set autochdir
