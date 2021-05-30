@@ -44,7 +44,7 @@ Plug 'mhinz/vim-startify'
 
 " LSP and Auto Complete
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
+Plug 'hrsh7th/nvim-compe'
 
 " Snippets
 Plug 'SirVer/ultisnips'

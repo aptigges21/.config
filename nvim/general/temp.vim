@@ -66,3 +66,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let g:completion_enable_snippet = 'UltiSnips'
 
 set autochdir
+
+" Auto Completion
+set completeopt=menuone,noselect
