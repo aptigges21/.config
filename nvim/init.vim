@@ -12,6 +12,7 @@ let g:config_file_list = [
       \ 'general/leader_config.vim',
       \ 'plugins/treesitter.vim',
       \ 'plugins/lsp.vim',
+      \ 'plugins/auto-pairs.vim',
 			\ ]
 
 for f in g:config_file_list

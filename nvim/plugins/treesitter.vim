@@ -1,6 +1,6 @@
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "verilog", "python" ,"c" },
+    ensure_installed = { "python" ,"c" },
     highlight = {
         enable = true, -- false will disable the whole extension
     },
