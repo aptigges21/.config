@@ -78,5 +78,3 @@ au BufNewFile,BufRead *.vim
 	\ set textwidth=79 |
 	\ set expandtab |
 	\ set autoindent |
-
-

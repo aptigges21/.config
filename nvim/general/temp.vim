@@ -24,10 +24,11 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 
 " Aesthetics
-set background=dark
-colorscheme iceberg 
+let g:nord_contrast = 1
+let g:nord_disable_background = 1
+colorscheme iceberg
 let g:airline_theme='iceberg'
-syntax on
+syntax off
 set number
 set laststatus=2
 
@@ -69,3 +70,6 @@ set autochdir
 
 " Auto Completion
 set completeopt=menuone,noselect
+
+" Recommended by vim-polyglot
+set nocompatible

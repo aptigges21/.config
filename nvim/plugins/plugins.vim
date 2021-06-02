@@ -3,16 +3,15 @@ call plug#begin('~/.vim/plugged')
 " Themes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'cocopon/iceberg.vim'
-Plug 'arcticicestudio/nord-vim'
 Plug 'ap/vim-css-color'
 Plug 'joshdick/onedark.vim'
+Plug 'shaunsingh/nord.nvim'
 
 " Misc
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
 Plug 'tmhedberg/SimpylFold'
-Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 
 " Treesitter
@@ -24,6 +23,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'bling/vim-airline'
+Plug 'sheerun/vim-polyglot'
 
 " Bufferline and controls
 Plug 'moll/vim-bbye'
@@ -63,5 +63,9 @@ Plug 'vhda/verilog_systemverilog.vim'
 
 " Ctags
 Plug 'ludovicchabant/vim-gutentags'
+
+" Auto-Pairs
+" Plug 'windwp/nvim-autopairs'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
