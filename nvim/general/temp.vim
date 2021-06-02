@@ -27,7 +27,6 @@ let g:cpp_class_decl_highlight = 1
 let g:nord_contrast = 1
 let g:nord_disable_background = 1
 colorscheme iceberg
-let g:airline_theme='iceberg'
 syntax off
 set number
 set laststatus=2

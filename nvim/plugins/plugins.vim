@@ -21,8 +21,7 @@ Plug 'nvim-treesitter/playground'
 " Cosmetics
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-airline'
+Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'sheerun/vim-polyglot'
 
 " Bufferline and controls

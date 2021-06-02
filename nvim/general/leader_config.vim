@@ -20,8 +20,8 @@ noremap <silent><leader>tg :FloatermNew lazygit<CR>
 noremap <silent><leader>ah :noh<CR>
 
 " Buffer Commands
-noremap <silent><leader>bn :BufferLineCyclePrev<CR>
-noremap <silent><leader>bb :BufferLineCycleNext<CR>
+noremap <silent><tab> :BufferLineCyclePrev<CR>
+noremap <silent><S-tab> :BufferLineCycleNext<CR>
 noremap <silent><leader>bh :BufferLineMoveNext<CR>
 noremap <silent><leader>bl :BufferLineMovePrev<CR>
 noremap <silent><leader>bd :Bdelete<CR>

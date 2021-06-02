@@ -14,7 +14,8 @@ let g:config_file_list = [
       \ 'general/leader_config.vim',
       \ 'plugins/lsp.vim',
       \ 'plugins/compe.vim',
-      \ 'plugins/auto-pairs.vim'
+      \ 'plugins/auto-pairs.vim',
+      \ 'plugins/galaxyline.vim'
 			\ ]
 
 for f in g:config_file_list
