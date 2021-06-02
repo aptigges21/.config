@@ -1,3 +1,6 @@
 */*
 !nvim
+!nvim/general
+!nvim/plugins
+!nvim/*
 tags
