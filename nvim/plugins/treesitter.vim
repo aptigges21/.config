@@ -1,6 +1,6 @@
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "python" ,"c" },
+    ensure_installed = { "python" ,"c", "html" },
     highlight = {
         enable = true, -- false will disable the whole extension
     },

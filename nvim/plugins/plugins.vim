@@ -64,7 +64,6 @@ Plug 'vhda/verilog_systemverilog.vim'
 Plug 'ludovicchabant/vim-gutentags'
 
 " Auto-Pairs
-" Plug 'windwp/nvim-autopairs'
 Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
