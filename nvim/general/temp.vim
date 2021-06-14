@@ -24,9 +24,7 @@ let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 
 " Aesthetics
-let g:nord_contrast = 1
-let g:nord_disable_background = 1
-colorscheme iceberg
+colorscheme nord
 syntax off
 set number
 set laststatus=2

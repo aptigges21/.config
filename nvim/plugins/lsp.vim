@@ -4,6 +4,7 @@ local lspconfig = require'lspconfig'
 lspconfig.pyright.setup{}
 lspconfig.gopls.setup{}
 lspconfig.metals.setup{}
+lspconfig.ccls.setup{}
 
 lspconfig.html.setup{
     filetypes = { 'html', 'htmldjango' }
