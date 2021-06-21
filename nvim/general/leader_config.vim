@@ -2,7 +2,7 @@ let mapleader=" "
 noremap <Space> <Nop>
 
 " General Commands
-noremap <silent><C-s>     :w<CR>
+noremap <silent><C-s> :w<CR>
 nnoremap <silent><leader>ah :noh<CR>
 inoremap <silent>jj <Esc>
 
@@ -17,7 +17,7 @@ noremap <silent><leader>tt :FloatermToggle<CR>
 noremap <silent><leader>tp :FloatermPrev<CR>
 noremap <silent><leader>tn :FloatermNext<CR>
 noremap <silent><leader>ta :FloatermNew<CR>
-noremap <silent><leader>ts :FloatermNew python<CR>
+noremap <silent><leader>ts :FloatermNew python3<CR>
 noremap <silent><leader>tr :FloatermNew ranger<CR>
 noremap <silent><leader>tg :FloatermNew lazygit<CR>
 

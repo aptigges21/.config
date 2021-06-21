@@ -10,7 +10,7 @@ let g:config_file_list = [
       \ 'plugins/nvim-bufferline.vim',
       \ 'plugins/vim-floaterm.vim',
       \ 'plugins/papercolor.vim',
-      \ 'general/temp.vim',
+      \ 'general/general.vim',
       \ 'general/leader_config.vim',
       \ 'plugins/lsp.vim',
       \ 'plugins/compe.vim',
