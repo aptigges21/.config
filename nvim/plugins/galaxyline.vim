@@ -3,7 +3,7 @@ local gl = require('galaxyline')
 local colors = require('galaxyline.theme').default
 local condition = require('galaxyline.condition')
 local gls = gl.section
-gl.short_line_list = {'NvimTree','vista','dbui','packer'}
+gl.short_line_list = {'NvimTree','startify','vim-plug'}
 
 gls.left[1] = {
       RainbowRed = {
@@ -180,7 +180,7 @@ gls.right[5] = {
   DiffAdd = {
     provider = 'DiffAdd',
     condition = condition.hide_in_width,
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.green,colors.bg},
   }
 }
@@ -188,7 +188,7 @@ gls.right[6] = {
   DiffModified = {
     provider = 'DiffModified',
     condition = condition.hide_in_width,
-    icon = ' 柳 ',
+    icon = '  ',
     highlight = {colors.orange,colors.bg},
   }
 }
@@ -196,7 +196,7 @@ gls.right[7] = {
   DiffRemove = {
     provider = 'DiffRemove',
     condition = condition.hide_in_width,
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.red,colors.bg},
   }
 }
@@ -232,4 +232,3 @@ gls.short_line_right[1] = {
   }
 }
 EOF
-
