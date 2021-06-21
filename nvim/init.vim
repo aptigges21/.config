@@ -9,6 +9,7 @@ let g:config_file_list = [
       \ 'plugins/markdown-preview.vim',
       \ 'plugins/nvim-bufferline.vim',
       \ 'plugins/vim-floaterm.vim',
+      \ 'plugins/papercolor.vim',
       \ 'general/temp.vim',
       \ 'general/leader_config.vim',
       \ 'plugins/lsp.vim',

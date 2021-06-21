@@ -3,7 +3,7 @@ noremap <Space> <Nop>
 
 " General Commands
 noremap <silent><C-s>     :w<CR>
-noremap <silent><leader>h :noh<CR>
+nnoremap <silent><leader>ah :noh<CR>
 inoremap <silent>jj <Esc>
 
 " Add Nerd Tree support
