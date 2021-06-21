@@ -31,10 +31,5 @@ noremap <silent><leader>bh :BufferLineMoveNext<CR>
 noremap <silent><leader>bl :BufferLineMovePrev<CR>
 noremap <silent><leader>bd :Bdelete<CR>
 
-" Fuzzy Finding
-nnoremap <silent><leader>ff <cmd>Telescope find_files<CR>
-nnoremap <silent><leader>fg <cmd>Telescope live_grep<CR>
-nnoremap <silent><leader>fl <cmd>Telescope git_files<CR>
-
 " Treesitter
 nnoremap <silent><leader>p :TSPlaygroundToggle<CR>

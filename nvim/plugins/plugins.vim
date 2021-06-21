@@ -31,10 +31,6 @@ Plug 'akinsho/nvim-bufferline.lua'
 " Floating Terminal
 Plug 'voldikss/vim-floaterm'
 
-" Latex
-Plug 'xuhdev/vim-latex-live-preview'
-Plug 'lervag/vimtex'
-
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -50,11 +46,6 @@ Plug 'SirVer/ultisnips'
 
 " Comments
 Plug 'preservim/nerdcommenter'
-
-" Fuzzy Finding
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 
 " Verilog and SystemVerilog support
 Plug 'vhda/verilog_systemverilog.vim'

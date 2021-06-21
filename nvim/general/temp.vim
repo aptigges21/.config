@@ -11,18 +11,12 @@ filetype plugin on
 " Commenting
 let g:NERDSpaceDelims = 1
 
-" Declare previewer for latex live preview
-let g:livepreview_previewer = 'zathura'
-
-" File Finding
-set path+=**
-set wildmenu
-
 " Aesthetics
 colorscheme PaperColor
 syntax off
 set number
 set laststatus=2
+set noshowmode
 
 " Enable folding
 set foldmethod=indent
