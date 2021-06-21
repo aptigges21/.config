@@ -25,11 +25,6 @@ let g:SimpylFold_docstring_preview=1
 
 set encoding=utf-8
 
-" GitGutter Settings
-set updatetime=500
-highlight! link SignColumn LineNr
-set signcolumn=yes
-
 " Better indentation
 vnoremap < <gv
 vnoremap > >gv
@@ -37,10 +32,4 @@ vnoremap > >gv
 " Remove auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Snippets as a part of auto completion
-let g:completion_enable_snippet = 'UltiSnips'
-
 set autochdir
-
-" Auto Completion
-set completeopt=menuone,noselect

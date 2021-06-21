@@ -17,6 +17,7 @@ let g:config_file_list = [
       \ 'plugins/auto-pairs.vim',
       \ 'plugins/galaxyline.vim',
       \ 'plugins/gitsigns.vim',
+      \ 'plugins/indentline.vim',
       \ ]
 
 for f in g:config_file_list
