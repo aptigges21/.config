@@ -16,8 +16,8 @@ let g:config_file_list = [
       \ 'plugins/compe.vim',
       \ 'plugins/auto-pairs.vim',
       \ 'plugins/galaxyline.vim',
-      \ 'plugins/vim-gitgutter.vim',
-			\ ]
+      \ 'plugins/gitsigns.vim',
+      \ ]
 
 for f in g:config_file_list
     execute 'source ' . g:nvim_config_root . '/' . f

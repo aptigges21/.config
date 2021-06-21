@@ -7,7 +7,7 @@ nnoremap <silent><leader>ah :noh<CR>
 inoremap <silent>jj <Esc>
 
 " Add Nerd Tree support
-noremap <silent><leader>e :NERDTreeToggle<CR>
+noremap <silent><leader>e :NvimTreeToggle<CR>
 
 " Add Markdown Preview Support
 noremap <silent><leader>tm :MarkdownPreview<CR>
@@ -30,6 +30,3 @@ noremap <silent><S-tab> :BufferLineCycleNext<CR>
 noremap <silent><leader>bh :BufferLineMoveNext<CR>
 noremap <silent><leader>bl :BufferLineMovePrev<CR>
 noremap <silent><leader>bd :Bdelete<CR>
-
-" Treesitter
-nnoremap <silent><leader>p :TSPlaygroundToggle<CR>

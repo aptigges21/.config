@@ -2,27 +2,28 @@ call plug#begin('~/.vim/plugged')
 
 " Themes
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'cocopon/iceberg.vim'
-Plug 'joshdick/onedark.vim'
-Plug 'shaunsingh/nord.nvim'
 
 " Misc
-Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
-Plug 'easymotion/vim-easymotion'
-Plug 'tmhedberg/SimpylFold'
-Plug 'airblade/vim-gitgutter'
 Plug 'ap/vim-css-color'
+
+" Git integration
+Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
+
+" Indentation help
+Plug 'lukas-reineke/indent-blankline.nvim', {'branch': 'lua'}
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
 
 " Cosmetics
-Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'sheerun/vim-polyglot'
+
+" File Explorer
+Plug 'kyazdani42/nvim-tree.lua'
 
 " Bufferline and controls
 Plug 'moll/vim-bbye'

@@ -1,4 +1,3 @@
-
 lua << EOF
 local gl = require('galaxyline')
 local colors = require('galaxyline.theme').default
@@ -7,56 +6,57 @@ local gls = gl.section
 gl.short_line_list = {'NvimTree','vista','dbui','packer'}
 
 gls.left[1] = {
-  RainbowRed = {
-    provider = function() return '▊ ' end,
-    highlight = {colors.blue,colors.bg}
-  },
+      RainbowRed = {
+            provider = function() return '▊ ' end,
+            highlight = {colors.blue,colors.bg}
+      },
 }
+
 gls.left[2] = {
-  ViMode = {
+ViMode = {
 	provider = function()
-    -- auto change color according the vim mode
-    local mode_color = {n = colors.red, i = colors.green,v=colors.blue,
-                [''] = colors.blue,V=colors.blue,
-                c = colors.magenta,no = colors.red,s = colors.orange,
-                S=colors.orange,[''] = colors.orange,
-                ic = colors.yellow,R = colors.violet,Rv = colors.violet,
-                cv = colors.red,ce=colors.red, r = colors.cyan,
-                rm = colors.cyan, ['r?'] = colors.cyan,
-                ['!']  = colors.red,t = colors.red}
-    vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()] ..' guibg='..colors.bg)
-    local aliases = {
-        [110] = 'NORMAL',
-        [105] = 'INSERT',
-        [99] = 'COMMAND',
-        [116] = 'TERMINAL',
-        [118] = 'VISUAL',
-        [22] = 'V-BLOCK',
-        [86] = 'V-LINE',
-        [82] = 'REPLACE',
-        [115] = 'SELECT',
-        [83] = 'S-LINE',
-    }
-    local alias = aliases[vim.fn.mode():byte()]
-    local mode
-    if alias ~= nil then
-        mode = alias
-    else
-        mode = vim.fn.mode():byte()
-    end
-    return ' ' .. mode .. ' '
+      -- auto change color according the vim mode
+      local mode_color = {n = colors.red, i = colors.green,v=colors.blue,
+            [''] = colors.blue,V=colors.blue,
+            c = colors.magenta,no = colors.red,s = colors.orange,
+            S=colors.orange,[''] = colors.orange,
+            ic = colors.yellow,R = colors.violet,Rv = colors.violet,
+            cv = colors.red,ce=colors.red, r = colors.cyan,
+            rm = colors.cyan, ['r?'] = colors.cyan,
+            ['!']  = colors.red,t = colors.red}
+      vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()] ..' guibg='..colors.bg)
+      local aliases = {
+            [110] = 'NORMAL',
+            [105] = 'INSERT',
+            [99] = 'COMMAND',
+            [116] = 'TERMINAL',
+            [118] = 'VISUAL',
+            [22] = 'V-BLOCK',
+            [86] = 'V-LINE',
+            [82] = 'REPLACE',
+            [115] = 'SELECT',
+            [83] = 'S-LINE',
+      }
+      local alias = aliases[vim.fn.mode():byte()]
+      local mode
+      if alias ~= nil then
+            mode = alias
+      else
+            mode = vim.fn.mode():byte()
+      end
+      return ' ' .. mode .. ' '
 
-    end,
-    highlight = { colors.bg, colors.bg, 'bold' },
-
+      end,
+      highlight = { colors.bg, colors.bg, 'bold' },
   },
 }
+
 gls.left[3] = {
-  FileSize = {
-    provider = 'FileSize',
-    condition = condition.buffer_not_empty,
-    highlight = {colors.fg,colors.bg}
-  }
+      FileSize = {
+            provider = 'FileSize',
+            condition = condition.buffer_not_empty,
+            highlight = {colors.fg,colors.bg}
+      }
 }
 gls.left[4] ={
   FileIcon = {
@@ -180,7 +180,7 @@ gls.right[5] = {
   DiffAdd = {
     provider = 'DiffAdd',
     condition = condition.hide_in_width,
-    icon = '    ',
+    icon = '  ',
     highlight = {colors.green,colors.bg},
   }
 }
@@ -188,7 +188,7 @@ gls.right[6] = {
   DiffModified = {
     provider = 'DiffModified',
     condition = condition.hide_in_width,
-    icon = '  柳 ',
+    icon = ' 柳 ',
     highlight = {colors.orange,colors.bg},
   }
 }
@@ -196,7 +196,7 @@ gls.right[7] = {
   DiffRemove = {
     provider = 'DiffRemove',
     condition = condition.hide_in_width,
-    icon = '    ',
+    icon = '  ',
     highlight = {colors.red,colors.bg},
   }
 }

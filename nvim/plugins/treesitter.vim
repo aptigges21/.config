@@ -2,7 +2,7 @@ lua <<EOF
 require'nvim-treesitter.configs'.setup {
     ensure_installed = { "python", "c", "html", "go", "scala" },
     highlight = {
-        enable = true, -- false will disable the whole extension
+        enable = true,
     },
     incremental_selection = {
         enable = true,
@@ -16,11 +16,6 @@ require'nvim-treesitter.configs'.setup {
             enable = true
         },
     }, 
-    playground = {
-        enable = true,
-        updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-        persist_queries = false -- Whether the query persists across vim sessions
-      },
 }
 
 EOF
