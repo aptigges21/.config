@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 " Themes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'cocopon/iceberg.vim'
-Plug 'ap/vim-css-color'
 Plug 'joshdick/onedark.vim'
 Plug 'shaunsingh/nord.nvim'
 
@@ -13,6 +12,7 @@ Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
 Plug 'tmhedberg/SimpylFold'
 Plug 'airblade/vim-gitgutter'
+Plug 'ap/vim-css-color'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -47,7 +47,6 @@ Plug 'hrsh7th/nvim-compe'
 
 " Snippets
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 
 " Comments
 Plug 'preservim/nerdcommenter'

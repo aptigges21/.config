@@ -3,16 +3,21 @@ noremap <Space> <Nop>
 
 " General Commands
 noremap <silent><C-s>     :w<CR>
+noremap <silent><leader>h :noh<CR>
+inoremap <silent>jj <Esc>
 
 " Add Nerd Tree support
 noremap <silent><leader>e :NERDTreeToggle<CR>
-noremap <silent><leader>h :noh<CR>
 
-" Section for floating terminal and other popups
 " Add Markdown Preview Support
 noremap <silent><leader>tm :MarkdownPreview<CR>
+
 " Floating Terminal Commands
-noremap <silent><leader>tt :FloatermNew<CR>
+noremap <silent><leader>tt :FloatermToggle<CR>
+noremap <silent><leader>tp :FloatermPrev<CR>
+noremap <silent><leader>tn :FloatermNext<CR>
+noremap <silent><leader>ta :FloatermNew<CR>
+noremap <silent><leader>ts :FloatermNew python<CR>
 noremap <silent><leader>tr :FloatermNew ranger<CR>
 noremap <silent><leader>tg :FloatermNew lazygit<CR>
 
@@ -32,4 +37,4 @@ nnoremap <silent><leader>fg <cmd>Telescope live_grep<CR>
 nnoremap <silent><leader>fl <cmd>Telescope git_files<CR>
 
 " Treesitter
-noremap <silent><leader>p :TSPlaygroundToggle<CR>
+nnoremap <silent><leader>p :TSPlaygroundToggle<CR>

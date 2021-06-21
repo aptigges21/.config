@@ -11,6 +11,7 @@ lspconfig.html.setup{
 }
 
 lspconfig.svls.setup {
-    filetypes = {'verilog_systemverilog', 'verilog', 'systemverilog'}
-    }
+    filetypes = {'verilog_systemverilog', 'verilog', 'systemverilog'},
+    root_dir = lspconfig.util.root_pattern('.svls.toml', '.git', '.svlint.toml')
+}
 EOF

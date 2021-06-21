@@ -2,7 +2,6 @@
 " Source files from nvim directory
 let g:nvim_config_root = stdpath('config')
 let g:config_file_list = [
-      \ 'general/filetype_options.vim',
       \ 'plugins/vim-polyglot.vim',
       \ 'plugins/plugins.vim',
       \ 'plugins/treesitter.vim',

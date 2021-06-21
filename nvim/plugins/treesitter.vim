@@ -1,6 +1,6 @@
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "python" ,"c", "html", "go", "scala" },
+    ensure_installed = { "python", "c", "html", "go", "scala" },
     highlight = {
         enable = true, -- false will disable the whole extension
     },
@@ -23,8 +23,4 @@ require'nvim-treesitter.configs'.setup {
       },
 }
 
-  
 EOF
-
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()

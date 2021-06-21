@@ -1,4 +1,5 @@
 " Splits and split navigations
+set splitbelow
 set splitright
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -9,7 +10,6 @@ filetype plugin on
 
 " Commenting
 let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
 
 " Declare previewer for latex live preview
 let g:livepreview_previewer = 'zathura'
@@ -18,13 +18,8 @@ let g:livepreview_previewer = 'zathura'
 set path+=**
 set wildmenu
 
-" text highlighting for C/C++
-let g:cpp_class_scope_highlight = 1
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
-
 " Aesthetics
-colorscheme nord
+colorscheme PaperColor
 syntax off
 set number
 set laststatus=2
@@ -34,16 +29,6 @@ set foldmethod=indent
 set foldlevel=99
 let g:SimpylFold_docstring_preview=1
 
-" Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Set completeopt to have a better completion experience
-set completeopt=menuone,noinsert,noselect
-
-" Avoid showing message extra message when using completion
-set shortmess+=c
-
 set encoding=utf-8
 
 " GitGutter Settings
@@ -51,13 +36,11 @@ set updatetime=500
 highlight! link SignColumn LineNr
 set signcolumn=yes
 
-" Cliboard Setup
-set clipboard+=unnamedplus
-
 " Better indentation
 vnoremap < <gv
 vnoremap > >gv
 
+" Remove auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Snippets as a part of auto completion
@@ -67,6 +50,3 @@ set autochdir
 
 " Auto Completion
 set completeopt=menuone,noselect
-
-" Recommended by vim-polyglot
-set nocompatible
