@@ -20,6 +20,8 @@ noremap <silent><leader>ta :FloatermNew<CR>
 noremap <silent><leader>ts :FloatermNew python3<CR>
 noremap <silent><leader>tr :FloatermNew ranger<CR>
 noremap <silent><leader>tg :FloatermNew lazygit<CR>
+noremap <silent><leader>tc :FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>
+noremap <silent><leader>tf :FloatermNew fzf<CR>
 
 " Action section
 noremap <silent><leader>ah :noh<CR>
