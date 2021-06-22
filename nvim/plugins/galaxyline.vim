@@ -6,13 +6,6 @@ local gls = gl.section
 gl.short_line_list = {'NvimTree','startify','vim-plug'}
 
 gls.left[1] = {
-      RainbowRed = {
-            provider = function() return ' ' end,
-            highlight = {colors.blue,colors.bg}
-      },
-}
-
-gls.left[2] = {
 ViMode = {
 	provider = function()
       -- auto change color according the vim mode
@@ -44,21 +37,37 @@ ViMode = {
       else
             mode = vim.fn.mode():byte()
       end
-      return ' ' .. mode .. ' '
+      return '  ' .. mode .. '    '
 
       end,
       highlight = { colors.bg, colors.bg, 'bold' },
   },
 }
 
+gls.left[2] ={
+  FileIcon = {
+    provider = 'FileIcon',
+    condition = condition.buffer_not_empty,
+    highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,colors.bg},
+  },
+}
+
 gls.left[3] = {
+  FileName = {
+    provider = 'FileName',
+    condition = condition.buffer_not_empty,
+    highlight = {colors.fg,colors.bg,'bold'}
+  }
+}
+
+gls.left[4] = {
   LineInfo = {
     provider = 'LineColumn',
     highlight = {colors.fg,colors.bg},
   },
 }
 
-gls.left[4] = {
+gls.left[5] = {
   PerCent = {
     provider = 'LinePercent',
     highlight = {colors.fg,colors.bg,'bold'},
@@ -143,8 +152,6 @@ gls.right[4] = {
   GitIcon = {
     provider = function() return '  ' end,
     condition = condition.check_git_workspace,
---    separator = ' ',
---    separator_highlight = {'NONE',colors.bg},
     highlight = {colors.violet,colors.bg,'bold'},
   }
 }
@@ -155,13 +162,6 @@ gls.right[5] = {
     condition = condition.check_git_workspace,
     highlight = {colors.violet,colors.bg,'bold'},
   }
-}
-
-gls.right[6] = {
-  RainbowBlue = {
-    provider = function() return '  ' end,
-    highlight = {colors.blue,colors.bg}
-  },
 }
 
 gls.short_line_left[1] = {
