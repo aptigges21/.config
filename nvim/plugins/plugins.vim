@@ -43,7 +43,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 
 " Snippets
-Plug 'SirVer/ultisnips'
+Plug 'hrsh7th/vim-vsnip'
 
 " Comments
 Plug 'preservim/nerdcommenter'
