@@ -14,13 +14,12 @@ noremap <silent><leader>tm :MarkdownPreview<CR>
 
 " Floating Terminal Commands
 noremap <silent><leader>tt :FloatermToggle<CR>
-noremap <silent><leader>tp :FloatermPrev<CR>
-noremap <silent><leader>tn :FloatermNext<CR>
 noremap <silent><leader>ta :FloatermNew<CR>
-noremap <silent><leader>ts :FloatermNew python3<CR>
+noremap <silent><leader>tp :FloatermNew python3<CR>
 noremap <silent><leader>tr :FloatermNew ranger<CR>
-noremap <silent><leader>tg :FloatermNew lazygit<CR>
+noremap <silent><leader>tl :FloatermNew lazygit<CR>
 noremap <silent><leader>tc :FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>
+noremap <silent><leader>tg :FloatermNew --autoclose=0 go run %<CR>
 noremap <silent><leader>tf :FloatermNew fzf<CR>
 
 " Action section

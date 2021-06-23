@@ -19,7 +19,7 @@ ViMode = {
             cv = colors.red,ce=colors.red, r = colors.cyan,
             rm = colors.cyan, ['r?'] = colors.cyan,
             ['!']  = colors.red,t = colors.red}
-      vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()] ..' guibg='..section_bg)
+      vim.api.nvim_command('hi GalaxyViMode guibg='..mode_color[vim.fn.mode()])
       local aliases = {
             [110] = 'NORMAL',
             [105] = 'INSERT',
@@ -39,10 +39,11 @@ ViMode = {
       else
             mode = vim.fn.mode():byte()
       end
-      return '  ' .. mode .. '  '
+      return '  ' .. mode .. ' '
 
       end,
-      highlight = { colors.bg, colors.bg, 'bold' },
+      highlight = { colors.bg, colors.bg, 'bold' }
+      --highlight = { colors.bg, colors.bg, 'bold' },
   },
 }
 
@@ -87,14 +88,14 @@ gls.mid[1] = {
 gls.mid[2] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.red,colors.bg}
   }
 }
 gls.mid[3] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.yellow,colors.bg},
   }
 }
@@ -102,7 +103,7 @@ gls.mid[3] = {
 gls.mid[4] = {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.cyan,colors.bg},
   }
 }
@@ -110,7 +111,7 @@ gls.mid[4] = {
 gls.mid[5] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.blue,colors.bg},
   }
 }
@@ -147,7 +148,7 @@ gls.right[4] = {
   GitIcon = {
     provider = function() return '  ' end,
     condition = condition.check_git_workspace,
-    highlight = {colors.violet,colors.bg,'bold'},
+    highlight = {colors.fg,colors.bg,'bold'},
   }
 }
 
@@ -155,14 +156,14 @@ gls.right[5] = {
   GitBranch = {
     provider = 'GitBranch',
     condition = condition.check_git_workspace,
-    highlight = {colors.violet,colors.bg,'bold'},
+    highlight = {colors.fg,colors.bg,'bold'},
   }
 }
 
 gls.right[6] = {
       PerCent = {
             provider = 'LinePercent',
-            separator = ' ',
+            separator = '',
             separator_highlight = { section_bg, colors.bg },
             highlight = { colors.fg, section_bg },
     },
