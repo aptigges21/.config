@@ -5,6 +5,8 @@ local condition = require('galaxyline.condition')
 local gls = gl.section
 gl.short_line_list = {'NvimTree','startify','vim-plug'}
 
+local section_bg = '#38393f'
+
 gls.left[1] = {
 ViMode = {
 	provider = function()
@@ -17,7 +19,7 @@ ViMode = {
             cv = colors.red,ce=colors.red, r = colors.cyan,
             rm = colors.cyan, ['r?'] = colors.cyan,
             ['!']  = colors.red,t = colors.red}
-      vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()] ..' guibg='..colors.bg)
+      vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()] ..' guibg='..section_bg)
       local aliases = {
             [110] = 'NORMAL',
             [105] = 'INSERT',
@@ -37,41 +39,34 @@ ViMode = {
       else
             mode = vim.fn.mode():byte()
       end
-      return '  ' .. mode .. '    '
+      return '  ' .. mode .. '  '
 
       end,
       highlight = { colors.bg, colors.bg, 'bold' },
   },
 }
 
-gls.left[2] ={
-  FileIcon = {
-    provider = 'FileIcon',
-    condition = condition.buffer_not_empty,
-    highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color,colors.bg},
-  },
-}
-
 gls.left[3] = {
-  FileName = {
-    provider = 'FileName',
-    condition = condition.buffer_not_empty,
-    highlight = {colors.fg,colors.bg,'bold'}
-  }
+    FileIcon = {
+        provider = { function()
+            return '  '
+        end, 'FileIcon' },
+        condition = buffer_not_empty,
+        highlight = {
+            require('galaxyline.provider_fileinfo').get_file_icon,
+            section_bg,
+        },
+    },
 }
 
 gls.left[4] = {
-  LineInfo = {
-    provider = 'LineColumn',
-    highlight = {colors.fg,colors.bg},
-  },
-}
-
-gls.left[5] = {
-  PerCent = {
-    provider = 'LinePercent',
-    highlight = {colors.fg,colors.bg,'bold'},
-  }
+    FileName = {
+        provider = 'FileName',
+        condition = buffer_not_empty,
+        highlight = { colors.fg, section_bg },
+        separator = ' ',
+        separator_highlight = { section_bg, colors.bg },
+    },
 }
 
 gls.mid[1] = {
@@ -150,7 +145,7 @@ gls.right[3] = {
 
 gls.right[4] = {
   GitIcon = {
-    provider = function() return '  ' end,
+    provider = function() return '  ' end,
     condition = condition.check_git_workspace,
     highlight = {colors.violet,colors.bg,'bold'},
   }
@@ -162,6 +157,15 @@ gls.right[5] = {
     condition = condition.check_git_workspace,
     highlight = {colors.violet,colors.bg,'bold'},
   }
+}
+
+gls.right[6] = {
+      PerCent = {
+            provider = 'LinePercent',
+            separator = ' ',
+            separator_highlight = { section_bg, colors.bg },
+            highlight = { colors.fg, section_bg },
+    },
 }
 
 gls.short_line_left[1] = {
