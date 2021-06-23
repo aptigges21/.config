@@ -15,7 +15,9 @@ noremap <silent><leader>tm :MarkdownPreview<CR>
 " Floating Terminal Commands
 noremap <silent><leader>tt :FloatermToggle<CR>
 noremap <silent><leader>ta :FloatermNew<CR>
-noremap <silent><leader>tp :FloatermNew python3<CR>
+noremap <silent><leader>tps :FloatermNew python3<CR>
+noremap <silent><leader>tpr :FloatermNew --autoclose=0 python3 %<CR>
+noremap <silent><leader>tpp :FloatermNew --autoclose=0 python3 -i %<CR>
 noremap <silent><leader>tr :FloatermNew ranger<CR>
 noremap <silent><leader>tl :FloatermNew lazygit<CR>
 noremap <silent><leader>tc :FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>
