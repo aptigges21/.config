@@ -18,6 +18,8 @@ noremap <silent><leader>ta :FloatermNew<CR>
 noremap <silent><leader>tps :FloatermNew python3<CR>
 noremap <silent><leader>tpr :FloatermNew --autoclose=0 python3 %<CR>
 noremap <silent><leader>tpp :FloatermNew --autoclose=0 python3 -i %<CR>
+noremap <silent><leader>ths :FloatermNew ghci<CR>
+noremap <silent><leader>thh :FloatermNew ghci %<CR>
 noremap <silent><leader>tr :FloatermNew ranger<CR>
 noremap <silent><leader>tl :FloatermNew lazygit<CR>
 noremap <silent><leader>tc :FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>

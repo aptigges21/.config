@@ -20,6 +20,6 @@ require'nvim-treesitter.configs'.setup {
 
 EOF
 
-set foldmethod=expr
-set foldnestmax=99
-set foldexpr=nvim_treesitter#foldexpr()
+" set foldmethod=expr
+" set foldnestmax=99
+" set foldexpr=nvim_treesitter#foldexpr()
