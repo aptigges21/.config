@@ -1,4 +1,3 @@
-lua << EOF
 local gl = require('galaxyline')
 local colors = require('galaxyline.theme').default
 local condition = require('galaxyline.condition')
@@ -19,7 +18,7 @@ ViMode = {
             cv = colors.red,ce=colors.red, r = colors.cyan,
             rm = colors.cyan, ['r?'] = colors.cyan,
             ['!']  = colors.red,t = colors.red}
-      vim.api.nvim_command('hi GalaxyViMode guibg='..mode_color[vim.fn.mode()])
+      vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()])
       local aliases = {
             [110] = 'NORMAL',
             [105] = 'INSERT',
@@ -43,7 +42,6 @@ ViMode = {
 
       end,
       highlight = { colors.bg, colors.bg, 'bold' }
-      --highlight = { colors.bg, colors.bg, 'bold' },
   },
 }
 
@@ -163,7 +161,7 @@ gls.right[5] = {
 gls.right[6] = {
       PerCent = {
             provider = 'LinePercent',
-            separator = '',
+            separator = ' ',
             separator_highlight = { section_bg, colors.bg },
             highlight = { colors.fg, section_bg },
     },
@@ -192,4 +190,3 @@ gls.short_line_right[1] = {
     highlight = {colors.fg,colors.bg}
   }
 }
-EOF

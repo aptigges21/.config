@@ -1,6 +1,5 @@
-lua <<EOF
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "python", "c", "html", "go", "scala" },
+    ensure_installed = { "python", "c", "html", "go", "scala", "lua" },
     highlight = {
         enable = true,
     },
@@ -17,9 +16,3 @@ require'nvim-treesitter.configs'.setup {
         },
     }, 
 }
-
-EOF
-
-" set foldmethod=expr
-" set foldnestmax=99
-" set foldexpr=nvim_treesitter#foldexpr()
