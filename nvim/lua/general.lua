@@ -5,15 +5,15 @@ local o = vim.o
 local g = vim.g
 
 -- General
-cmd 'set autochdir'
+o.autochdir = true
 cmd 'filetype plugin on'
-cmd 'set encoding=utf-8'
+o.encoding = 'utf-8'
 
 local options = { noremap = true, silent = true }
 
 -- Splits and split navigations
-cmd 'set splitbelow'
-cmd 'set splitright'
+o.splitbelow = true
+o.splitright = true
 map('n', '<C-J>', '<C-W><C-J>', options)
 map('n', '<C-K>', '<C-W><C-K>', options)
 map('n', '<C-L>', '<C-W><C-L>', options)

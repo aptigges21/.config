@@ -9,17 +9,11 @@ lspconfig.gopls.setup{}
 lspconfig.metals.setup{}
 lspconfig.ccls.setup{}
 lspconfig.sumneko_lua.setup {
-      cmd = {sumneko_binary, "-E", sumneko_root_path .. "main.lua"};
-      settings = {
-            Lua = {
-                  diagnostics = {
-                        globals = {'vim'},
-                        },
-                  },
-            },
+  cmd = {sumneko_binary, "-E", sumneko_root_path .. "main.lua"};
+  settings = { Lua = { diagnostics = { globals = {'vim'} } } }
 }
 
 lspconfig.svls.setup {
-    filetypes = {'verilog_systemverilog', 'verilog', 'systemverilog'},
-    root_dir = lspconfig.util.root_pattern('.svls.toml', '.git', '.svlint.toml')
+  filetypes = {'verilog_systemverilog', 'verilog', 'systemverilog'},
+  root_dir = lspconfig.util.root_pattern('.svls.toml', '.git', '.svlint.toml')
 }

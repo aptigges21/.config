@@ -14,70 +14,70 @@ local colors = {
 }
 local condition = require('galaxyline.condition')
 local gls = gl.section
-gl.short_line_list = {'NvimTree','startify'}
+gl.short_line_list = {'NvimTree', 'startify', 'packer'}
 
 local section_bg = '#414868'
 
 gls.left[1] = {
 ViMode = {
 	provider = function()
-      -- auto change color according the vim mode
-      local mode_color = {n = colors.red, i = colors.green,v=colors.blue,
-            [''] = colors.blue,V=colors.blue,
-            c = colors.magenta,no = colors.red,s = colors.orange,
-            S=colors.orange,[''] = colors.orange,
-            ic = colors.yellow,R = colors.violet,Rv = colors.violet,
-            cv = colors.red,ce=colors.red, r = colors.cyan,
-            rm = colors.cyan, ['r?'] = colors.cyan,
-            ['!']  = colors.red,t = colors.red}
-      vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()])
-      local aliases = {
-            [110] = 'NORMAL',
-            [105] = 'INSERT',
-            [99] = 'COMMAND',
-            [116] = 'TERMINAL',
-            [118] = 'VISUAL',
-            [22] = 'V-BLOCK',
-            [86] = 'V-LINE',
-            [82] = 'REPLACE',
-            [115] = 'SELECT',
-            [83] = 'S-LINE',
-      }
-      local alias = aliases[vim.fn.mode():byte()]
-      local mode
-      if alias ~= nil then
-            mode = alias
-      else
-            mode = vim.fn.mode():byte()
-      end
-      return '  ' .. mode .. ' '
+    -- auto change color according the vim mode
+    local mode_color = {n = colors.red, i = colors.greener,v=colors.blue,
+      [''] = colors.blue,V=colors.blue,
+      c = colors.magenta,no = colors.red,s = colors.orange,
+      S=colors.orange,[''] = colors.orange,
+      ic = colors.yellow,R = colors.violet,Rv = colors.violet,
+      cv = colors.red,ce=colors.red, r = colors.cyan,
+      rm = colors.cyan, ['r?'] = colors.cyan,
+      ['!']  = colors.red,t = colors.red}
+    vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()])
+    local aliases = {
+      [110] = 'NORMAL',
+      [105] = 'INSERT',
+      [99] = 'COMMAND',
+      [116] = 'TERMINAL',
+      [118] = 'VISUAL',
+      [22] = 'V-BLOCK',
+      [86] = 'V-LINE',
+      [82] = 'REPLACE',
+      [115] = 'SELECT',
+      [83] = 'S-LINE',
+    }
+    local alias = aliases[vim.fn.mode():byte()]
+    local mode
+    if alias ~= nil then
+      mode = alias
+    else
+      mode = vim.fn.mode():byte()
+    end
+    return '  ' .. mode .. ' '
 
-      end,
-      highlight = { colors.bg, colors.bg, 'bold' }
+  end,
+  highlight = { colors.bg, colors.bg, 'bold' }
   },
 }
 
 gls.left[3] = {
-    FileIcon = {
-        provider = { function()
-            return '  '
-        end, 'FileIcon' },
-        condition = buffer_not_empty,
-        highlight = {
-            require('galaxyline.provider_fileinfo').get_file_icon,
-            section_bg,
-        },
+  FileIcon = {
+    provider = { function()
+      return '  '
+    end, 'FileIcon' },
+    condition = buffer_not_empty,
+    highlight = {
+      require('galaxyline.provider_fileinfo').get_file_icon,
+      section_bg,
     },
+  },
 }
 
 gls.left[4] = {
-    FileName = {
-        provider = 'FileName',
-        condition = buffer_not_empty,
-        highlight = { colors.fg, section_bg },
-        separator = '',
-        separator_highlight = { section_bg, colors.bg },
-    },
+  FileName = {
+    provider = 'FileName',
+    condition = buffer_not_empty,
+    highlight = { colors.fg, section_bg },
+    separator = '',
+    separator_highlight = { section_bg, colors.bg },
+  },
 }
 
 gls.mid[1] = {
@@ -171,12 +171,12 @@ gls.right[5] = {
 }
 
 gls.right[6] = {
-      PerCent = {
-            provider = 'LinePercent',
-            separator = ' ',
-            separator_highlight = { section_bg, colors.bg },
-            highlight = { colors.fg, section_bg },
-    },
+  PerCent = {
+    provider = 'LinePercent',
+    separator = ' ',
+    separator_highlight = { section_bg, colors.bg },
+    highlight = { colors.fg, section_bg },
+  },
 }
 
 gls.short_line_left[1] = {

@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
 		config = function() require('gitsigns').setup() end
 	}
 	-- Treesitter
-	use { 'nvim-treesitter/nvim-treesitter', config = function() require'treesitter' end,	run = ':TSUpate' }
+	use { 'nvim-treesitter/nvim-treesitter', config = function() require'treesitter' end,	run = 'TSUpate' }
 	-- GUI
 	use {
 		'glepnir/galaxyline.nvim',
