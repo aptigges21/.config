@@ -1,7 +1,8 @@
+local map = vim.api.nvim_set_keymap
 local cmd = vim.cmd
 
+-- Plugins
 cmd [[packadd packer.nvim]]
-
 require('packer').startup(function(use)
 	-- Load Packer
 	use  {'wbthomason/packer.nvim', opt = true}
@@ -50,7 +51,6 @@ require('treesitter')
 require('leader')
 
 vim.o.completeopt="menuone,noselect"
-local map = vim.api.nvim_set_keymap
 
 cmd 'set shortmess+=c'
 require'compe'.setup {

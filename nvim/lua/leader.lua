@@ -4,8 +4,8 @@ local options = { noremap = true, silent = true }
 map('n', '<space>', '', {})
 vim.g.mapleader = ' '
 
--- General Commands
-map('n', '<leader>h', ':noh<CR>', options)
+-- Action Commands
+map('n', '<leader>ah', ':noh<CR>', options)
 
 -- NvimTree
 map('n', '<leader>e', ':NvimTreeToggle<CR>', options)
@@ -23,8 +23,8 @@ map('n', '<leader>tc', ':FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>', opt
 map('n', '<leader>tf', ':FloatermNew fzf<CR>', options)
 
 -- Buffer Commands
-map('n', '<leader><tab>', ':BufferLineCycleNext<CR>', options)
-map('n', '<leader><S-tab>', ':BufferLineCyclePrev<CR>', options)
+map('n', '<tab>', ':BufferLineCycleNext<CR>', options)
+map('n', '<S-tab>', ':BufferLineCyclePrev<CR>', options)
 map('n', '<leader>bh', ':BufferLineMoveNext<CR>', options)
 map('n', '<leader>bl', ':BufferLineMovePrev<CR>', options)
 map('n', '<leader>bd', ':Bdelete<CR>', options)

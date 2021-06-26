@@ -4,7 +4,6 @@ local lspconfig = require'lspconfig'
 local sumneko_root_path = '/home/drew/.lua-lsp/'
 local sumneko_binary = sumneko_root_path.."bin/Linux/lua-language-server"
 
-
 lspconfig.pyright.setup{}
 lspconfig.gopls.setup{}
 lspconfig.metals.setup{}
