@@ -35,7 +35,7 @@ require('packer').startup(function(use)
 	-- Floating Terminal
 	use 'voldikss/vim-floaterm'
 	-- Start Screen
-	use 'mhinz/vim-startify'
+	use { 'mhinz/vim-startify', config = function () require'vim-startify' end }
 	-- LSP and Auto Complete
 	use { 'neovim/nvim-lspconfig', config = function() require'lsp' end }
 	use { 'hrsh7th/nvim-compe' }
