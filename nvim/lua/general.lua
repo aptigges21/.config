@@ -2,6 +2,7 @@ local map = vim.api.nvim_set_keymap
 local cmd = vim.cmd
 local wo = vim.wo
 local o = vim.o
+local g = vim.g
 
 -- General
 cmd 'set autochdir'
@@ -18,12 +19,10 @@ map('n', '<C-K>', '<C-W><C-K>', options)
 map('n', '<C-L>', '<C-W><C-L>', options)
 map('n', '<C-H>', '<C-W><C-H>', options)
 
--- Commenting
-cmd 'let g:NERDSpaceDelims = 1'
 
 -- Aesthetics
 cmd 'colorscheme tokyonight'
-vim.g.tokyonight_style = 'night'
+g.tokyonight_style = 'night'
 cmd 'syntax off'
 o.laststatus = 2
 wo.number = true
@@ -42,7 +41,10 @@ cmd('autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions
 map('i', 'jj', '<esc>', options)
 
 -- Floaterm setup
-vim.g.floaterm_width = 0.85
-vim.g.floaterm_height = 0.85
-vim.g.floaterm_autoclose = 1
-vim.g.floaterm_opener = 'vsplit'
+g.floaterm_width = 0.85
+g.floaterm_height = 0.85
+g.floaterm_autoclose = 1
+g.floaterm_opener = 'vsplit'
+
+-- NerdCommenter setup
+g.NERDSpaceDelims = 1
