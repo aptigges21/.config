@@ -9,7 +9,8 @@ local colors = {
   cyan = '#7dcfff',
   magenta = '#bb9af7',
   violet = '#5658f9',
-  bg = '#24283b'
+  bg = '#1f2335',
+  fg = '#c0caf5'
 }
 local condition = require('galaxyline.condition')
 local gls = gl.section
