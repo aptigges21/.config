@@ -38,6 +38,7 @@ require('packer').startup(function(use)
 	-- LSP and Auto Complete
 	use { 'neovim/nvim-lspconfig', config = function() require'lsp' end }
 	use { 'hrsh7th/nvim-compe' }
+  use 'hrsh7th/vim-vsnip'
 	-- Comments
 	use 'preservim/nerdcommenter'
 	-- Verilog & SystemVerilog

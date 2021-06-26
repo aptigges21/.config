@@ -23,8 +23,8 @@ map('n', '<leader>tc', ':FloatermNew --autoclose=0 gcc % -o %< && ./%<<CR>', opt
 map('n', '<leader>tf', ':FloatermNew fzf<CR>', options)
 
 -- Buffer Commands
-map('n', '<silent><tab>', ':BufferLineCycleNext<CR>', options)
-map('n', '<silent><S-tab>', ':BufferLineCyclePrev<CR>', options)
-map('n', '<silent>bh', ':BufferLineMoveNext<CR>', options)
-map('n', '<silent>bl', ':BufferLineMovePrev<CR>', options)
-map('n', '<silent>bd', ':Bdelete<CR>', options)
+map('n', '<leader><tab>', ':BufferLineCycleNext<CR>', options)
+map('n', '<leader><S-tab>', ':BufferLineCyclePrev<CR>', options)
+map('n', '<leader>bh', ':BufferLineMoveNext<CR>', options)
+map('n', '<leader>bl', ':BufferLineMovePrev<CR>', options)
+map('n', '<leader>bd', ':Bdelete<CR>', options)
