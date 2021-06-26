@@ -1,10 +1,21 @@
 local gl = require('galaxyline')
-local colors = require('galaxyline.theme').default
+local colors = {
+  red = '#f7768e',
+  green = '#73daca',
+  greener = '#9ece6a',
+  blue = '#7aa2f7',
+  yellow = '#e0af68',
+  orange = '#ff9364',
+  cyan = '#7dcfff',
+  magenta = '#bb9af7',
+  violet = '#5658f9',
+  bg = '#24283b'
+}
 local condition = require('galaxyline.condition')
 local gls = gl.section
 gl.short_line_list = {'NvimTree','startify'}
 
-local section_bg = '#38393f'
+local section_bg = '#414868'
 
 gls.left[1] = {
 ViMode = {
@@ -63,7 +74,7 @@ gls.left[4] = {
         provider = 'FileName',
         condition = buffer_not_empty,
         highlight = { colors.fg, section_bg },
-        separator = ' ',
+        separator = '',
         separator_highlight = { section_bg, colors.bg },
     },
 }
@@ -79,7 +90,7 @@ gls.mid[1] = {
       return true
     end,
     icon = ' LSP:',
-    highlight = {colors.yellow,colors.bg,'bold'}
+    highlight = {colors.green,colors.bg,'bold'}
   }
 }
 
@@ -120,7 +131,7 @@ gls.right[1] = {
     provider = 'DiffAdd',
     condition = condition.hide_in_width,
     icon = ' ',
-    highlight = {colors.green,colors.bg},
+    highlight = {colors.greener,colors.bg},
   }
 }
 
