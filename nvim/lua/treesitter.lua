@@ -1,5 +1,7 @@
+local o = vim.o
+
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "python", "c", "html", "go", "scala", "lua" },
+    ensure_installed = { "python", "c", "html", "go", "scala", "lua", "verilog" },
     highlight = {
         enable = true,
     },
@@ -11,8 +13,12 @@ require'nvim-treesitter.configs'.setup {
             scope_incremental = "grc",
             node_decremental = "grm",
         },
-        indent = {
-            enable = true
-        },
+    },
+    indent = {
+        enable = true
     },
 }
+
+o.foldnestmax = 99
+o.foldmethod = 'expr'
+o.foldexpr = 'nvim_treesitter#foldexpr()'

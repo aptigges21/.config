@@ -10,13 +10,12 @@ local colors = {
   magenta = '#bb9af7',
   violet = '#5658f9',
   bg = '#1f2335',
-  fg = '#c0caf5'
+  fg = '#c0caf5',
+  section = '#414868'
 }
 local condition = require('galaxyline.condition')
 local gls = gl.section
 gl.short_line_list = {'NvimTree', 'startify', 'packer'}
-
-local section_bg = '#414868'
 
 gls.left[1] = {
 ViMode = {
@@ -65,7 +64,7 @@ gls.left[3] = {
     condition = buffer_not_empty,
     highlight = {
       require('galaxyline.provider_fileinfo').get_file_icon,
-      section_bg,
+      colors.section,
     },
   },
 }
@@ -74,9 +73,9 @@ gls.left[4] = {
   FileName = {
     provider = 'FileName',
     condition = buffer_not_empty,
-    highlight = { colors.fg, section_bg },
+    highlight = { colors.fg, colors.section },
     separator = '',
-    separator_highlight = { section_bg, colors.bg },
+    separator_highlight = { colors.section, colors.bg },
   },
 }
 
@@ -102,6 +101,7 @@ gls.mid[2] = {
     highlight = {colors.red,colors.bg}
   }
 }
+
 gls.mid[3] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
@@ -125,7 +125,6 @@ gls.mid[5] = {
     highlight = {colors.blue,colors.bg},
   }
 }
-
 
 gls.right[1] = {
   DiffAdd = {
@@ -174,8 +173,8 @@ gls.right[6] = {
   PerCent = {
     provider = 'LinePercent',
     separator = ' ',
-    separator_highlight = { section_bg, colors.bg },
-    highlight = { colors.fg, section_bg },
+    separator_highlight = { colors.section, colors.bg },
+    highlight = { colors.fg, colors.section },
   },
 }
 

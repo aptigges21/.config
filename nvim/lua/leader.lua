@@ -28,3 +28,7 @@ map('n', '<S-tab>', ':BufferLineCyclePrev<CR>', options)
 map('n', '<leader>bh', ':BufferLineMoveNext<CR>', options)
 map('n', '<leader>bl', ':BufferLineMovePrev<CR>', options)
 map('n', '<leader>bd', ':Bdelete<CR>', options)
+
+-- Fold Commands
+map('n', '<leader>ff', 'za', options)
+map('n', '<leader>fa', 'zA', options)
