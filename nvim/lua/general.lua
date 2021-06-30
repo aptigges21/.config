@@ -1,12 +1,12 @@
 local map = vim.api.nvim_set_keymap
 local cmd = vim.cmd
 local wo = vim.wo
+local bo = vim.bo
 local o = vim.o
 local g = vim.g
 
 -- General
 o.autochdir = true
-cmd 'filetype plugin on'
 o.encoding = 'utf-8'
 
 local options = { noremap = true, silent = true }
@@ -22,12 +22,12 @@ map('n', '<C-H>', '<C-W><C-H>', options)
 
 -- Aesthetics
 cmd 'colorscheme tokyonight'
+cmd 'set noshowmode'
 g.tokyonight_style = 'night'
-cmd 'syntax off'
+bo.syntax = 'off'
 o.laststatus = 2
 wo.number = true
-cmd 'set noshowmode'
-cmd 'set termguicolors'
+o.termguicolors = true
 wo.signcolumn = 'yes'
 
 -- Better indentation
@@ -48,3 +48,21 @@ g.floaterm_opener = 'vsplit'
 
 -- NerdCommenter setup
 g.NERDSpaceDelims = 1
+
+-- Formating
+o.fileformat = 'unix'
+o.textwidth = 79
+cmd([[
+  au BufNewFile,BufRead *.c set ts=4
+]])
+
+-- Disable vim plugins
+g.loaded_gzip = 0
+g.loaded_tar = 0
+g.loaded_tarPlugin = 0
+g.loaded_zipPlugin = 0
+g.loaded_2htmlPlugin = 0
+g.loaded_netrw = 0
+g.loaded_netrwPlugin = 0
+g.loaded_matchit = 0
+g.loaded_spec = 0
