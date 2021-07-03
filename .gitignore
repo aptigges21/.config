@@ -1,4 +1,8 @@
 */*
 !nvim
 !nvim/*
+!sway/*
+!waybar/*
+!alacritty/*
 tags*
+mimeapps.list

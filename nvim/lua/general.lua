@@ -51,7 +51,6 @@ g.NERDSpaceDelims = 1
 
 -- Formating
 o.fileformat = 'unix'
-o.textwidth = 79
 cmd([[
   au BufNewFile,BufRead *.c set ts=4
 ]])
